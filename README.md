@@ -26,6 +26,12 @@ Median imputation of missing VOC values.
 Filtering of significant VOCs based on Mann–Whitney U tests.
 Exclusion of outliers 
 
+NOTE: Two files are provided in this repository.
+
+- 'unsupervised_dimensionality_reduction_final.ipynb': the original, step-by-step notebook from that has URF + MDS and pre processing step for URF+UMAP (Baseline, ComBat, PCA, Z-score) separately. 
+
+- 'uRF_UMAP_pipeline.ipynb' : cleaner version of URF+UMAP with single pipeline, reduced redundancy, and added final quantitative comparison (Silhouette scores) to summarize performance across pipelines.
+
 
 Modeling Approaches:
 
