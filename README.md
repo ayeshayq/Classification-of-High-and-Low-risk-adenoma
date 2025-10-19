@@ -1,12 +1,13 @@
-Classification of High- and Low-Risk Adenoma Using Random Forest and XGBoost
+##Classification of High- and Low-Risk Adenoma Using Random Forest and XGBoost##
 
 This project aims to classify high-risk (HRA) and low-risk (LRA) adenoma patients (adenomas that may develop into colorectal cancer) using volatile organic compound (VOC) data and advanced machine learning methods. The goal is to uncover both intrinsic structure in the data (unsupervised learning) and predictive biomarkers that differentiate patient groups (supervised learning). Noise removal, baseline correction and alignment is already done.
 
 Two main analyses were performed:
-1. Unsupervised Dimensionality Reduction 
+#1. Unsupervised Dimensionality Reduction 
 An unsupervised pipeline was designed to explore the inherent structure in the dataset without using labels. The workflow consisted of the following steps:
 
-a.Initial Approach: An Unsupervised Random Forest (uRF) was first combined with Multidimensional Scaling (MDS) to create a baseline visualization of sample relationships. b.Refined Approach (Final Version): The pipeline was improved by integrating uRF with UMAP along with a few changes to the preprocessing:
+a.Initial Approach: An Unsupervised Random Forest (uRF) was first combined with Multidimensional Scaling (MDS) to create a baseline visualization of sample relationships. 
+b.Refined Approach (Final Version): The pipeline was improved by integrating uRF with UMAP along with a few changes to the preprocessing:
 
 
 Scaled ComBat Batch Correction: Corrected for inter-batch variability (using sequencing batch as the batch variable and subgroup as the biological covariate). 
@@ -17,7 +18,7 @@ UMAP Embedding: Generated a low-dimensional (2D) embedding of the proximity matr
 
 → For each model run, a Silhouette Score is given to measure how well points cluster in their groups.
 
-2. Supervised Classification
+#2. Supervised Classification
 The supervised analysis focused on developing robust classification models to distinguish HRA and LRA samples using VOC features.
 Preprocessing and Feature Selection:
 Removal of samples with excessive missingness.
@@ -37,5 +38,5 @@ b.XGBoost Classifier: Evaluated using: CV and test accuracy, feature importance 
 c.SHAP values for model interpretability and insight into individual VOC contributions for both RF and XGboost.
 
 
-Data Availability
+#Data Availability
 The original FORAGI “AMOUNTS” VOC dataset used in this project is not included in this repository due to data privacy considerations. Access to the dataset can be provided upon request.
